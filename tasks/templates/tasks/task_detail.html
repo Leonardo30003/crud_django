@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de la Tarea</title>
+</head>
+<body>
+<p> Nombre de la Tarea: {{ task.name }} | <a href="{% url 'tasks:task_update' task.id %}">Actualizar</a> |
+    <a href="{% url 'tasks:task_delete' task.id %}">Eliminar</a>
+</p>
+<p> Estado de la Tarea: {{ task.get_status_display }} </p>
+<p> <a href="{% url 'tasks:task_list' %}">Ver todas las tareas</a> |
+    <a href="{% url 'tasks:task_create'%}">Nueva Tarea</a>
+</p>
+</body>
+</html>
